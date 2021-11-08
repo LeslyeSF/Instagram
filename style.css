@@ -1,0 +1,533 @@
+body{
+    background-color: #E5E5E5;
+}
+button {
+    background-color: rgba(255,255,255,0);
+    border: 0px solid #FFFFFF;
+    color:#000000;
+    font-size: 20px; 
+}
+button:hover{
+    cursor: pointer;
+    
+}
+strong:hover, .storie div:hover, .storie p:hover, .secao-comentarios .numero-com:hover{
+    cursor: pointer;
+}
+
+.Espaco {
+    width: 935px;
+
+    display: flex;
+    justify-content: space-between;
+}
+.Barra-de-topo {
+    width: 100%;
+    height: 54px;
+    background-color: #FFFFFF;
+
+    border: 1px solid #DBDBDB;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    position: fixed;
+    top: 0;
+    z-index: 10;
+}
+.Logo-insta {
+    display: flex;
+    align-items: center;
+}
+.Icon-logo{
+    margin-right: 11.38px ;
+
+    color: black;
+    font-size: 20px;
+}
+.Separador-vertical {
+    width: 1px;
+    height: 22px;
+    background-color: #DBDBDB;
+    display: inline;
+    margin-right: 11px;
+}
+.Barra-pesquisa{
+    width: 215px;
+    height: 28px;
+    background-color: #FAFAFA;
+
+    text-align: center;
+
+    font-family: 'Roboto', sans-serif;
+    color: #DBDBDB;
+    font-size: 12px;
+    font-weight: 400;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+    border-radius: 3px;
+    border: 1px solid #DBDBDB;
+}
+.Botoes-opcoes button ion-icon {
+    font-size: 22px;
+
+    margin-left: 15px;
+}
+.Logo-insta button{
+    font-size: 22px;
+    display: none;
+    margin-left: 15px;
+}
+.Container {
+    width: 100%;
+    margin-top: 88px;
+
+    display: flex;
+    justify-content: center;
+    
+}
+.Subcontainer1{
+    width: 614px;
+}
+.Subcontainer2{
+    width: 321px;
+}
+
+.Janela-de-stories {
+    width: 614px;
+    height: 118px;
+    background-color: #FFFFFF;
+
+    border: 1px solid #DBDBDB;
+    border-radius: 3px;   
+
+    display: flex;
+    align-items: center;
+
+    overflow: hidden;
+
+}
+
+.Janela-de-stories div{
+    display: flex;
+
+}
+.botao-stories{
+    position: relative;
+    right: 70px;
+    z-index: 2;
+    
+}
+.botao-stories ion-icon{
+    color: #FFFFFF;
+    font-size: 30px;
+    border-radius: 50%;
+    box-shadow: -5px 5px 5px rgba(0,0,0,0.05);
+
+}
+.storie{
+    height: 91px;
+    width: 66px;
+    margin-left: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.storie div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 66px;
+    height: 66px;
+}
+.storie p {
+    font-family:  'Roboto', sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    color: #262626;
+
+    margin-top: 6px;
+}
+.moldura{
+    width: 66px;
+    height: 66px;
+    position: relative;
+    left: 30.5px;
+
+    
+}
+
+.storie-foto{
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    position: relative;
+    left: -30.5px;
+    z-index: 1;
+}
+
+
+
+.Timeline {
+    width: 614px;
+    margin-top: 24px;
+}
+.Post {
+    width: 100%;
+    background-color: #FFFFFF;
+
+    border: 1px solid #DBDBDB;
+    border-radius: 3px;
+
+    margin-bottom: 60px;
+
+}
+.Info-post {
+    width: 100%;
+    height: 61px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.Perfil {
+    display: flex;
+    align-items: center;
+    margin-left: 17px;
+}
+.Info-post .Perfil img {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+}
+.Info-post .Perfil img:hover {
+    cursor: pointer;
+}
+.Info-post .Perfil .Nome-perfil {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    margin-left: 10px;
+
+    width: 109px;
+    height: 21px;
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.Info-post button {
+    margin-right: 17px;
+    font-size: 20px;
+}
+.Post img {
+    width: 100%;
+    height: 612px;
+}
+.Post embed {
+    width: 100%;
+    height: 612px;
+}
+.Iteracao-post {
+    margin-top: 10px;
+    
+    font-size: 20px;
+
+    display: flex;
+    justify-content: space-between;
+}
+.Iteracao-post .Curti-com-env button{
+    margin-left: 17px;
+    font-size: 22px;
+}
+.Iteracao-post .Salvar button{
+    margin-right: 17px;
+    font-size: 20px;
+}
+.Info-curtida {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-left: 17px;
+    margin-top: 13px;
+    margin-bottom: 10px;
+}
+.Info-curtida p {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: 14px;
+
+    margin-left: 5px;
+}
+.Info-curtida p strong {
+    font-weight: 500;
+}
+.Info-curtida button img{
+    width: 22px;
+    height: 20px;
+    border-radius: 50%;
+
+}
+.secao-comentarios{
+    margin-left: 17px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+}
+.secao-comentarios .Nome-perfil{
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    display: inline;
+    margin-bottom: 6px;
+}
+.secao-comentarios .heart{
+    font-size: 13px;
+}
+.comentario{
+    width: 96%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.secao-comentarios .numero-com{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    color: #8E8E8E;
+    margin-left: 5px;
+    margin-bottom: 7px;
+}
+.secao-comentarios .minutos{
+    font-size: 12px;
+    margin-bottom: 10px;
+}
+.secao-comentarios .barra-horizontal{
+    width: 96%;
+    height: 1px;
+    background-color: #C7C7C7;
+    margin-bottom: 10px;
+}
+.caixa-comentarios{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    width: 96%;
+}
+.caixa-comentarios input{
+    width: 80%;
+    height: 17px;
+    border-color: 1px solid #DBDBDB;
+}
+.caixa-comentarios button{
+    background-color: #B2DFFC;
+    border-radius: 5px;
+    font-size: 17px;
+    color: #8E8E8E;
+    font-family: 'Roboto', sans-serif;
+}
+.caixa-comentarios button:hover{
+    background-color: #0095F6;
+    color: #FFFFFF;
+    transition: background 300ms;
+    transition: color 300ms;
+}
+.Sidebar {
+    width: 293px;
+
+    margin-left: 28px;
+
+    position: fixed;
+    z-index: 10;
+}
+.Suges-principal{
+    margin-top: 23px;
+    display: flex;
+    align-items: center;
+}
+.Suges-principal div {
+    width: 182px;
+    height: 34px;
+
+    margin-left: 17px;
+
+    font-family:  'Roboto', sans-serif;
+    font-size: 14px;
+    color: #C7C7C7;
+    font-weight: 300;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+.Suges-principal div button{
+    font-family:'Roboto', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+
+    margin-left: 0;
+}
+.Suges-principal div p {
+    margin-left: 6px;
+}
+.Sidebar .Suges-principal img {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+
+}
+.Barra-separa-opcoes{
+    width: 100%;
+
+    margin-top: 24px;
+    display: flex;
+    justify-content: space-between;
+ 
+    font-family:  'Roboto', sans-serif;
+    font-size: 12px;
+    color: #8E8E8E;
+    font-weight: 500;
+
+}
+.Barra-separa-opcoes button{
+    font-family:  'Roboto', sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    color: #262626;
+}
+.Sugestoes{
+    width: 100%;
+
+    margin-top: 17px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.Sugestoes .esquerda{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.Sugestoes div img {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+}
+.esquerda div button {
+    font-family:'Roboto', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    color: #262626;
+}
+.esquerda div p {
+    font-family:'Roboto', sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    color: #8E8E8E;
+
+    margin-left: 6px;
+}
+.direita button{
+    font-family:'Roboto', sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    color: #139EF2;
+}
+.Rodape{
+    width: 100%;
+
+    margin-top: 33px;
+
+    font-family:'Roboto', sans-serif;
+    font-size: 11px;
+    font-weight: 400;
+    color: #C7C7C7;
+
+}
+.Barra-inferior{
+    width: 100%;
+    height: 54px;
+    position: fixed;
+    bottom: 0;
+    z-index: 10;
+    background-color: #FFFFFF;
+    display: none;
+}
+.Barra-inferior button{
+    color: black;
+    font-size: 20px;
+}
+@media (max-width: 935px){
+    .Subcontainer2{
+        display: none;
+    }   
+    .Container{
+        width: 100%;
+        justify-content: center;
+    }
+}
+@media (max-width: 614px){
+    .Subcontainer2{
+        display: none;
+    }   
+    .Container{
+        width: 100%;
+        justify-content: center;
+    }
+    .Logo-insta{
+        width: 100%;
+        justify-content: space-between;
+    }
+    .Logo-insta button {
+        display: inline;
+    }
+    .Barra-pesquisa{
+        display: none;
+    }
+    .Separador-vertical{
+        display: none;
+    }
+    .Botoes-opcoes{
+        display: none;
+    }
+    .botao-stories{
+        display: none;
+    }
+    .Janela-de-stories{
+        width: 100%;
+        background-color: #E5E5E5;
+        border: 0px;
+    }
+    .moldura{
+        border-radius: 50%;
+    }
+    .Container{
+        margin-top: 54px;
+    }
+    .Subcontainer1, .Timeline{
+        width: 100%;
+    }
+    .Timeline{
+        margin-top: 0;
+    }
+    .Barra-inferior{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+}
+
+
+
+
+
