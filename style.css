@@ -1,27 +1,35 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    word-wrap: break-word;
+  }
 body{
-    background-color: #E5E5E5;
+    background-color: #FAFAFA;
+
+    font-family:  'Roboto', sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    color: #262626;
+
+    overflow-x: hidden;
 }
 button {
-    background-color: rgba(255,255,255,0);
-    border: 0px solid #FFFFFF;
+    font-family:'Roboto', sans-serif;
+    font-size: 20px;
+    font-weight: 500;
     color:#000000;
-    font-size: 20px; 
+
+    background-color: rgba(255,255,255,0);
+
+    border: 0px solid #FFFFFF;
 }
-button:hover{
+button:hover, .story div:hover, .story p:hover, .comments-section .number-comments:hover, ion-icon:hover{
     cursor: pointer;
     
 }
-strong:hover, .storie div:hover, .storie p:hover, .secao-comentarios .numero-com:hover{
-    cursor: pointer;
-}
 
-.Espaco {
-    width: 935px;
-
-    display: flex;
-    justify-content: space-between;
-}
-.Barra-de-topo {
+header {
     width: 100%;
     height: 54px;
     background-color: #FFFFFF;
@@ -29,32 +37,41 @@ strong:hover, .storie div:hover, .storie p:hover, .secao-comentarios .numero-com
     border: 1px solid #DBDBDB;
 
     display: flex;
-    flex-direction: row;
     justify-content: center;
-    align-items: center;
 
     position: fixed;
     top: 0;
-    z-index: 10;
+    z-index: 5;
 }
-.Logo-insta {
+.container {
+    width: 935px;
+    height: 100%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo {
+    height: 100%;
+
     display: flex;
     align-items: center;
 }
-.Icon-logo{
-    margin-right: 11.38px ;
-
+.logo ion-icon{
     color: black;
-    font-size: 20px;
+    font-size: 22px;
 }
-.Separador-vertical {
+.logo .paper-plane{
+    display: none;
+}
+.spacer {
     width: 1px;
     height: 22px;
     background-color: #DBDBDB;
     display: inline;
-    margin-right: 11px;
+    margin: 0px 11px 0px 11px ;
 }
-.Barra-pesquisa{
+.search-area{
     width: 215px;
     height: 28px;
     background-color: #FAFAFA;
@@ -74,112 +91,92 @@ strong:hover, .storie div:hover, .storie p:hover, .secao-comentarios .numero-com
     border-radius: 3px;
     border: 1px solid #DBDBDB;
 }
-.Botoes-opcoes button ion-icon {
-    font-size: 22px;
-
-    margin-left: 15px;
+.button-options{
+    display: flex;
+    gap: 10px;
 }
-.Logo-insta button{
+.button-options ion-icon {
     font-size: 22px;
-    display: none;
-    margin-left: 15px;
 }
-.Container {
+main {
     width: 100%;
     margin-top: 88px;
 
     display: flex;
     justify-content: center;
-    
 }
-.Subcontainer1{
+.main-box{
     width: 614px;
 }
-.Subcontainer2{
+.second-box{
     width: 321px;
 }
-
-.Janela-de-stories {
+nav {
     width: 614px;
     height: 118px;
     background-color: #FFFFFF;
+
+    padding: 0px 0px 0px 10px;
 
     border: 1px solid #DBDBDB;
     border-radius: 3px;   
 
     display: flex;
     align-items: center;
+    gap: 15px;
 
     overflow: hidden;
 
-}
-
-.Janela-de-stories div{
-    display: flex;
-
-}
-.botao-stories{
     position: relative;
-    right: 70px;
-    z-index: 2;
+}
+.button-story{
+    position: absolute;
+    right: 10px;
+    z-index: 4;
     
 }
-.botao-stories ion-icon{
+.button-story ion-icon{
     color: #FFFFFF;
     font-size: 30px;
     border-radius: 50%;
     box-shadow: -5px 5px 5px rgba(0,0,0,0.05);
-
 }
-.storie{
-    height: 91px;
-    width: 66px;
-    margin-left: 15px;
+.story{
+    width: 70px;
+
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-.storie div{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.story div{
+    width: 70px;
+    height: 70px;
 
-    width: 66px;
-    height: 66px;
-}
-.storie p {
-    font-family:  'Roboto', sans-serif;
-    font-size: 12px;
-    font-weight: 400;
-    color: #262626;
-
-    margin-top: 6px;
-}
-.moldura{
-    width: 66px;
-    height: 66px;
+    margin-bottom: 5px;
     position: relative;
-    left: 30.5px;
-
-    
+}
+.frame{
+    width: 100%;
+    height: 100%;    
 }
 
-.storie-foto{
-    width: 56px;
-    height: 56px;
+.story-photo{
+    width: 60px;
+    height: 60px;
     border-radius: 50%;
-    position: relative;
-    left: -30.5px;
-    z-index: 1;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    z-index: 3;
 }
 
 
 
-.Timeline {
+.timeline {
     width: 614px;
     margin-top: 24px;
 }
-.Post {
+.post {
     width: 100%;
     background-color: #FFFFFF;
 
@@ -189,7 +186,7 @@ strong:hover, .storie div:hover, .storie p:hover, .secao-comentarios .numero-com
     margin-bottom: 60px;
 
 }
-.Info-post {
+.info-post {
     width: 100%;
     height: 61px;
 
@@ -197,20 +194,20 @@ strong:hover, .storie div:hover, .storie p:hover, .secao-comentarios .numero-com
     justify-content: space-between;
     align-items: center;
 }
-.Perfil {
+.profile {
     display: flex;
     align-items: center;
     margin-left: 17px;
 }
-.Info-post .Perfil img {
+.info-post .profile img {
     width: 32px;
     height: 32px;
     border-radius: 50%;
 }
-.Info-post .Perfil img:hover {
+.info-post .profile img:hover {
     cursor: pointer;
 }
-.Info-post .Perfil .Nome-perfil {
+.profile .name-user{
     font-family: 'Roboto', sans-serif;
     font-weight: 500;
     font-size: 14px;
@@ -223,19 +220,19 @@ strong:hover, .storie div:hover, .storie p:hover, .secao-comentarios .numero-com
     justify-content: flex-start;
     align-items: center;
 }
-.Info-post button {
+.info-post button {
     margin-right: 17px;
     font-size: 20px;
 }
-.Post img {
+.post img {
     width: 100%;
     height: 612px;
 }
-.Post embed {
+.post embed {
     width: 100%;
     height: 612px;
 }
-.Iteracao-post {
+.options-post {
     margin-top: 10px;
     
     font-size: 20px;
@@ -243,15 +240,15 @@ strong:hover, .storie div:hover, .storie p:hover, .secao-comentarios .numero-com
     display: flex;
     justify-content: space-between;
 }
-.Iteracao-post .Curti-com-env button{
+.options-post div button{
     margin-left: 17px;
     font-size: 22px;
 }
-.Iteracao-post .Salvar button{
+.options-post .save button{
     margin-right: 17px;
     font-size: 20px;
 }
-.Info-curtida {
+.like {
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -259,45 +256,44 @@ strong:hover, .storie div:hover, .storie p:hover, .secao-comentarios .numero-com
     margin-top: 13px;
     margin-bottom: 10px;
 }
-.Info-curtida p {
+.like p {
     font-family: 'Roboto', sans-serif;
     font-weight: 300;
     font-size: 14px;
 
     margin-left: 5px;
 }
-.Info-curtida p strong {
+.like p strong {
     font-weight: 500;
 }
-.Info-curtida button img{
+.like button img{
     width: 22px;
     height: 20px;
     border-radius: 50%;
 
 }
-.secao-comentarios{
+.comments-section{
     margin-left: 17px;
-    font-family: 'Roboto', sans-serif;
     font-weight: 400;
     font-size: 14px;
 }
-.secao-comentarios .Nome-perfil{
+.comments-section .name-user{
     font-family: 'Roboto', sans-serif;
     font-size: 14px;
     font-weight: 500;
     display: inline;
     margin-bottom: 6px;
 }
-.secao-comentarios .heart{
+.comments-section .heart{
     font-size: 13px;
 }
-.comentario{
+.comments{
     width: 96%;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-.secao-comentarios .numero-com{
+.comments-section .number-comments{
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
     font-size: 14px;
@@ -305,42 +301,48 @@ strong:hover, .storie div:hover, .storie p:hover, .secao-comentarios .numero-com
     margin-left: 5px;
     margin-bottom: 7px;
 }
-.secao-comentarios .minutos{
+.comments-section .time{
     font-size: 12px;
     margin-bottom: 10px;
 }
-.secao-comentarios .barra-horizontal{
+.comments-section .horizontal-space{
     width: 96%;
     height: 1px;
     background-color: #C7C7C7;
     margin-bottom: 10px;
 }
-.caixa-comentarios{
+.box-comments{
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 10px;
     width: 96%;
 }
-.caixa-comentarios input{
+.box-comments input{
     width: 80%;
-    height: 17px;
-    border-color: 1px solid #DBDBDB;
+    height: 30px;
+    border: 0px solid #DBDBDB;
+
+    font-family:  'Roboto', sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    color: #8E8E8E;
 }
-.caixa-comentarios button{
-    background-color: #B2DFFC;
+.box-comments button{
+    background-color: #FFFFFF;
     border-radius: 5px;
     font-size: 17px;
-    color: #8E8E8E;
+    color: #B2DFFC;
     font-family: 'Roboto', sans-serif;
 }
-.caixa-comentarios button:hover{
+.box-comments button:hover{
     background-color: #0095F6;
     color: #FFFFFF;
     transition: background 300ms;
     transition: color 300ms;
 }
-.Sidebar {
+
+aside {
     width: 293px;
 
     margin-left: 28px;
@@ -348,18 +350,23 @@ strong:hover, .storie div:hover, .storie p:hover, .secao-comentarios .numero-com
     position: fixed;
     z-index: 10;
 }
-.Suges-principal{
+.main-suggestion{
     margin-top: 23px;
+
     display: flex;
     align-items: center;
 }
-.Suges-principal div {
+.main-suggestion img {
+    width: 56px;
+    height: 56px;
+
+    border-radius: 50%;
+}
+.main-suggestion div {
     width: 182px;
-    height: 34px;
 
     margin-left: 17px;
 
-    font-family:  'Roboto', sans-serif;
     font-size: 14px;
     color: #C7C7C7;
     font-weight: 300;
@@ -367,25 +374,13 @@ strong:hover, .storie div:hover, .storie p:hover, .secao-comentarios .numero-com
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    justify-content: flex-start;
 }
-.Suges-principal div button{
-    font-family:'Roboto', sans-serif;
+.main-suggestion div button{
     font-size: 14px;
-    font-weight: 500;
 
-    margin-left: 0;
+    margin: 0px 0px 2px 0px;
 }
-.Suges-principal div p {
-    margin-left: 6px;
-}
-.Sidebar .Suges-principal img {
-    width: 56px;
-    height: 56px;
-    border-radius: 50%;
-
-}
-.Barra-separa-opcoes{
+.horizontal-space{
     width: 100%;
 
     margin-top: 24px;
@@ -398,13 +393,10 @@ strong:hover, .storie div:hover, .storie p:hover, .secao-comentarios .numero-com
     font-weight: 500;
 
 }
-.Barra-separa-opcoes button{
-    font-family:  'Roboto', sans-serif;
+.horizontal-space button{
     font-size: 12px;
-    font-weight: 500;
-    color: #262626;
 }
-.Sugestoes{
+.suggestion{
     width: 100%;
 
     margin-top: 17px;
@@ -413,37 +405,36 @@ strong:hover, .storie div:hover, .storie p:hover, .secao-comentarios .numero-com
     justify-content: space-between;
     align-items: center;
 }
-.Sugestoes .esquerda{
+.info-suggestion{
     display: flex;
     justify-content: flex-start;
     align-items: center;
 }
-.Sugestoes div img {
+.info-suggestion img {
     width: 32px;
     height: 32px;
+
     border-radius: 50%;
 }
-.esquerda div button {
-    font-family:'Roboto', sans-serif;
-    font-size: 14px;
-    font-weight: 500;
-    color: #262626;
+.info-suggestion div{
+    margin: 0px 0px 0px 10px;
 }
-.esquerda div p {
-    font-family:'Roboto', sans-serif;
+.info-suggestion div button {
+    font-size: 14px;
+
+    margin: 0px 0px 3px 0px;
+}
+.info-suggestion div p {
     font-size: 12px;
     font-weight: 400;
     color: #8E8E8E;
-
-    margin-left: 6px;
 }
-.direita button{
-    font-family:'Roboto', sans-serif;
+.follow {
     font-size: 12px;
     font-weight: 400;
     color: #139EF2;
 }
-.Rodape{
+footer{
     width: 100%;
 
     margin-top: 33px;
@@ -454,7 +445,8 @@ strong:hover, .storie div:hover, .storie p:hover, .secao-comentarios .numero-com
     color: #C7C7C7;
 
 }
-.Barra-inferior{
+
+.nav-bottom{
     width: 100%;
     height: 54px;
     position: fixed;
@@ -463,64 +455,64 @@ strong:hover, .storie div:hover, .storie p:hover, .secao-comentarios .numero-com
     background-color: #FFFFFF;
     display: none;
 }
-.Barra-inferior button{
+.nav-bottom button{
     color: black;
     font-size: 20px;
 }
 @media (max-width: 935px){
-    .Subcontainer2{
+    .second-box{
         display: none;
     }   
-    .Container{
+    main{
         width: 100%;
         justify-content: center;
     }
 }
 @media (max-width: 614px){
-    .Subcontainer2{
+    .second-box{
         display: none;
     }   
-    .Container{
+    main{
         width: 100%;
         justify-content: center;
     }
-    .Logo-insta{
+    .logo{
         width: 100%;
         justify-content: space-between;
     }
-    .Logo-insta button {
+    .logo .paper-plane{
         display: inline;
     }
-    .Barra-pesquisa{
+    .search-area{
         display: none;
     }
-    .Separador-vertical{
+    .spacer{
         display: none;
     }
-    .Botoes-opcoes{
+    .button-options{
         display: none;
     }
-    .botao-stories{
+    .button-story{
         display: none;
     }
-    .Janela-de-stories{
+    nav{
         width: 100%;
         background-color: #E5E5E5;
         border: 0px;
     }
-    .moldura{
+    .frame{
         border-radius: 50%;
     }
-    .Container{
+    main{
         margin-top: 54px;
     }
-    .Subcontainer1, .Timeline{
+    .main-box, .timeline{
         width: 100%;
     }
-    .Timeline{
+    .timeline{
         margin-top: 0;
     }
-    .Barra-inferior{
+    .nav-bottom{
         display: flex;
         justify-content: space-around;
         align-items: center;
